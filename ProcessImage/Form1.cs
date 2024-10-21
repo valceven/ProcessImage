@@ -87,7 +87,37 @@ namespace ProcessImage
 
             pictureBox2.Image = processed;
         }
-    
+
+        private void mirrorHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            processed = new Bitmap(loaded.Width, loaded.Height);
+            Color pixel;
+            for (int x = loaded.Width - 1; x > 0; x--)
+            {
+                for (int y = 0; y < loaded.Height; y++)
+                {
+                    pixel = loaded.GetPixel(x, y);
+                    processed.SetPixel(loaded.Width - x, y, pixel);
+                }
+            }
+            pictureBox2.Image = processed;
+        }
+
+        private void mirrorVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            processed = new Bitmap(loaded.Width, loaded.Height);
+            Color pixel;
+            for (int i = 0 ; i < loaded.Width; i++)
+            {
+                for (int j = loaded.Height - 1 ; j > 0; j--)
+                {
+                    pixel = loaded.GetPixel(i, j);
+                    processed.SetPixel(i, loaded.Height - j, pixel);
+                }
+            }
+            pictureBox2.Image = processed;
+        }
+
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             loaded = new Bitmap(openFileDialog1.FileName);

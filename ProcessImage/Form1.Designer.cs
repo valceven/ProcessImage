@@ -74,14 +74,14 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -105,7 +105,7 @@
             // pixelCopyToolStripMenuItem1
             // 
             this.pixelCopyToolStripMenuItem1.Name = "pixelCopyToolStripMenuItem1";
-            this.pixelCopyToolStripMenuItem1.Size = new System.Drawing.Size(165, 22);
+            this.pixelCopyToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.pixelCopyToolStripMenuItem1.Text = "Pixel Copy";
             this.pixelCopyToolStripMenuItem1.Click += new System.EventHandler(this.pixelCopyToolStripMenuItem1_Click);
             // 
@@ -126,14 +126,16 @@
             // mirrorHorizontalToolStripMenuItem
             // 
             this.mirrorHorizontalToolStripMenuItem.Name = "mirrorHorizontalToolStripMenuItem";
-            this.mirrorHorizontalToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.mirrorHorizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mirrorHorizontalToolStripMenuItem.Text = "Mirror Horizontal";
+            this.mirrorHorizontalToolStripMenuItem.Click += new System.EventHandler(this.mirrorHorizontalToolStripMenuItem_Click);
             // 
             // mirrorVerticalToolStripMenuItem
             // 
             this.mirrorVerticalToolStripMenuItem.Name = "mirrorVerticalToolStripMenuItem";
-            this.mirrorVerticalToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.mirrorVerticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mirrorVerticalToolStripMenuItem.Text = "Mirror Vertical";
+            this.mirrorVerticalToolStripMenuItem.Click += new System.EventHandler(this.mirrorVerticalToolStripMenuItem_Click);
             // 
             // pixelCopyToolStripMenuItem
             // 
