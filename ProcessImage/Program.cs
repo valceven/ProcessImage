@@ -16,7 +16,7 @@ namespace ProcessImage
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImageProcessor());
+            Application.Run(new Homepage());
         }
     }
 }

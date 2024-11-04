@@ -146,6 +146,11 @@ namespace ProcessImage
             pictureBox2.Image = processed;
         }
 
+        private void ImageProcessor_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             loaded = new Bitmap(openFileDialog1.FileName);
