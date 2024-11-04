@@ -118,6 +118,34 @@ namespace ProcessImage
             pictureBox2.Image = processed;
         }
 
+        
+        private void histogramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.Hist(ref loaded,ref processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            processed = new Bitmap(loaded.Width, loaded.Height);
+            Color pixel;
+            double r,g,b;
+
+            for (int i = 0 ; i < loaded.Width;i++)
+            {
+                for (int j = 0 ; j < loaded.Height; j++)
+                {
+                    pixel = loaded.GetPixel(i,j);
+                    r = Math.Min((pixel.R * 0.393) + (pixel.G * 0.769) + (pixel.B * 0.189) * 1.2, 255);
+                    g = Math.Min((pixel.R * 0.349) + (pixel.G * 0.686) + (pixel.B * 0.168) * 1.2, 255);
+                    b = Math.Min((pixel.R * 0.272) + (pixel.G * 0.534) + (pixel.B * 0.131) * 1.2, 255);
+                    Color sepia = Color.FromArgb((int)r,(int)g,(int)b);
+                    processed.SetPixel(i,j,sepia);
+                }
+            }
+            pictureBox2.Image = processed;
+        }
+
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             loaded = new Bitmap(openFileDialog1.FileName);
